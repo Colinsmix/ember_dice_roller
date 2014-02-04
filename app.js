@@ -117,3 +117,8 @@ Roller.DiceInputField = Ember.TextField.extend({
         controller.send(action, this.get("rollString"), this);
     }
 });
+
+Roller.secondsOnPage = 0;
+setInterval(function(){
+    Roller.set('secondsOnPage', Roller.get('secondsOnPage') + 1);
+}, 1000);
